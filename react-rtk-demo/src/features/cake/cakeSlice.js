@@ -8,7 +8,7 @@ const cakeSlice = createSlice({
   name: 'cake',
   initialState,
   reducers: {
-    ordered: state => {
+    ordered: (state) => {
       state.numOfCakes--
     },
     restocked: (state, action) => {
@@ -18,4 +18,5 @@ const cakeSlice = createSlice({
 })
 
 export default cakeSlice.reducer
+//for cakeview.jsx
 export const { ordered, restocked } = cakeSlice.actions

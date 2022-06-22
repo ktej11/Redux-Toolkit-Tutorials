@@ -1,8 +1,10 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+//action creators { ordered, restocked }
 import { ordered, restocked } from './cakeSlice'
 
 export const CakeView = () => {
+  //state represents multiple reducers and we have a reducer called cake so state.cake
   const numOfCakes = useSelector(state => state.cake.numOfCakes)
   const dispatch = useDispatch()
   return (
