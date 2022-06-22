@@ -9,6 +9,7 @@ const initialState = {
 }
 
 // Generates pending, fulfilled and rejected action types
+//createAsyncThunk('actiontype like icecream/oderd etc' and callback function
 const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
   return axios
     .get('https://jsonplaceholders.typicode.com/users')
@@ -18,7 +19,7 @@ const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
 const userSlice = createSlice({
   name: 'user',
   initialState,
-  extraReducers: builder => {
+  extraReducers: (builder) => {
     builder.addCase(fetchUsers.pending, state => {
       state.loading = true
     })

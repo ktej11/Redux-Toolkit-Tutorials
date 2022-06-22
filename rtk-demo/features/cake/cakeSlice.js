@@ -16,6 +16,7 @@ const cakeSlice = createSlice({
     }
   }
 })
-
+//for store
 module.exports = cakeSlice.reducer
-module.exports.cakeActions = cakeSlice.actions
+//for index
+module.exports.cakeActions = cakeSlice.actions 
